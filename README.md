@@ -1,6 +1,6 @@
 # 🧮 React BMI Calculator
+![Preview](./public/web.png)
 
-![Thumbnail](./thumbnail.png)
 
 A simple and beginner-friendly **BMI (Body Mass Index) Calculator** built using **React**.  
 This project helps users calculate their BMI and understand their health category.
@@ -28,8 +28,13 @@ This project helps users calculate their BMI and understand their health categor
 ## 📊 How BMI is Calculated
 
 ```
-BMI = weight (kg) / (height (m) × height (m))
+BMI = weight (lbs) / (height (in) × height (in) * 703)
 ```
+
+## 📷 Project Preview
+![Thumbnail](./public/thumb.png)
+
+
 
 ---
 
@@ -59,7 +64,7 @@ npm start
 
 ## 🌐 Live Demo
 
-👉 [Add your Vercel/Netlify link here]
+https://bmi-cal-mauve.vercel.app/
 
 ---
 
@@ -95,8 +100,3 @@ Feel free to fork this repo and improve it!
 
 If you like this project, give it a ⭐ on GitHub!
 
----
-
-## 📷 Project Preview
-
-![Preview](./preview.png)
