@@ -10,6 +10,8 @@ const[height , setHeight] = useState(0)
 const[bmi , setBmi] = useState('')
 const[message , setMessage] = useState('')
 
+//logic part
+
 let calcBmi = (event) => {
   event.preventDefault()
 
