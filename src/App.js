@@ -11,29 +11,23 @@ const[bmi , setBmi] = useState('')
 const[message , setMessage] = useState('')
 
 let calcBmi = (event) => {
-//prevenitng sumitting to the server
-event.preventDefault()
-console.log(event);
+  event.preventDefault()
 
-//makeing bmi calculator formula
-if (weight === 0 || height === 0) {
-  alert('Please enter a valid wieght and height')
-} else {
-  let bmi = (weight / (height * height) * 703)
-  setBmi (bmi.toFixed(1))
+  if (weight === 0 || height === 0) {
+    alert('Please enter a valid weight and height')
+  } else {
+    let calculatedBmi = (weight / (height * height) * 703)
+    setBmi(calculatedBmi.toFixed(1))
+
+    if (calculatedBmi < 25) {
+      setMessage("You are underweight")
+    } else if (calculatedBmi >= 25 && calculatedBmi < 30) {
+      setMessage("You are a healthy Person")
+    } else {
+      setMessage("You are OverWeight")
+    }
+  }
 }
-
-//logic for message
-
-if( bmi < 25) {
-  setMessage("You are underweight")
-}else if (bmi >= 25 && bmi < 30) {
-  setMessage("You are a healthy Person")
-}else{
-  setMessage("You are OverWeight")
-}
-}
-
 let reload = () => {
   window.location.reload()
 }
